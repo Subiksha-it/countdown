@@ -21,11 +21,11 @@ function App() {
 export default App*/}
 
 
-import { BrowserRouter , Routes ,Route } from "react-router-dom";
+{/*import { BrowserRouter , Routes ,Route } from "react-router-dom";
 import Dashboard from "./component/pages/Dashboard";
 import Login from "./component/pages/Login";
 import Register from "./component/pages/Register";
-import PageNotFound from "./component/pages/pageNotFound";
+{/*import PageNotFound from "./component/pages/pageNotFound";
 
 
 function App() {
@@ -43,4 +43,29 @@ function App() {
         </>
     )
 }
+export default App*/}
+
+import {BrowserRouter,Routes,Route } from "react-router-dom"
+import Login from "./pages/Login"
+import Dashboard from "./pages/Dashboard"
+import Register from "./pages/Register"
+import PageNotFound from "./pages/pageNotFound"
+
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/dashboard" element={<Dashboard />}/>
+        <Route path="/" element={<Login />}/>
+        <Route path="/register" element={<Register />}/>
+        <Route path="*" element={<PageNotFound/>}/>
+      </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
+
 export default App
+
+
